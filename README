@@ -1,0 +1,4 @@
+LaTeX šablonai, skirti olimpiadų užduočių užrašymui.
+Naujas olimpiados etapas pradedamas paimant `template' katalogo kopiją
+bei naudojant ten esantį `task.tex' kaip pagrindą.
+
