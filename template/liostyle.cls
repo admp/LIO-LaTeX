@@ -4,7 +4,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{boistyle}
-\LoadClass[11pt]{article}
+\LoadClass[11pt,a4paper]{article}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage{times}
 \RequirePackage{a4wide}
@@ -17,6 +17,7 @@
 \RequirePackage{times}
 \RequirePackage{listings}
 \RequirePackage{amsmath}
+\RequirePackage[lithuanian]{babel}
 
 \pagestyle{fancy}
 
@@ -25,7 +26,6 @@
 % Might want to try XeTeX one day.
 \def\LTfontencoding{L7x}
 \usepackage[\LTfontencoding]{fontenc}
-\usepackage[lithuanian]{babel}
 \renewcommand{\sfdefault}{uhv}
 \renewcommand{\rmdefault}{utm}
 \renewcommand{\ttdefault}{ucr}
