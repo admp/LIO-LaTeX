@@ -51,6 +51,7 @@
 \newcommand{\TitleOutput}{Rezultatai}
 \newcommand{\TitleInput}{Pradiniai duomenys}
 \newcommand{\TitleExamples}{Pavyzdžiai}
+\newcommand{\TitleExplanation}{Paaiškinimas}
 \newcommand{\TitleConstraints}{Ribojimai}
 \newcommand{\TitleGrading}{Vertinimas}
 
