@@ -64,7 +64,7 @@
 %\showboxbreadth=50
 
 \newlength{\LogoLength}\setlength{\LogoLength}{1.4cm}
-\newcommand{\Logo}{logo_titleless}
+\newcommand{\Logo}{logo_black}
 
 \lhead{}\rhead{}
 \chead{%
