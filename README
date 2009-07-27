@@ -2,3 +2,7 @@ LaTeX šablonai, skirti olimpiadų užduočių užrašymui.
 Naujas olimpiados etapas pradedamas paimant `template' katalogo kopiją
 bei naudojant ten esantį `task.tex' kaip pagrindą.
 
+Ganėtinai trumpas (tačiau detalus) įvadas į LaTeX:
+
+    http://tobi.oetiker.ch/lshort/lshort.pdf
+
