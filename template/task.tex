@@ -1,0 +1,84 @@
+\documentclass{liostyle}
+
+\renewcommand{\taskname}{task} % in lowercase letters
+\renewcommand{\longtaskname}{Task Name} % the title
+\renewcommand{\version}{1.0}
+
+% Put constraints here, to avoid inconsistency later
+\newcommand{\maxN}{1\ 000\ 000}
+\newcommand{\maxA}{1\ 000}
+
+\begin{document}
+
+Write a short introductionary story here, if there is one. Usually we
+try to have one because it makes the problem easier to understand.
+
+\Task
+Put a detailed description of the task, i.e. what is requested to be
+found or analysed.
+
+\Input
+This part should describe the input format, together with constrants. Next
+paragraph provides such an example.
+
+The first line of input will contain the number of items to add 
+($\mathbf{N}\le\maxN$).
+In the following $\mathbf{N}$ lines $a_i$ ($a_i\le\maxA$) are presented; it holds
+$a_i\le a_j$ for every $(a_i, a_j)$ where $i<j$.
+
+\Output
+Specify what is to be written to the output file, and what format is to
+be used. Example is given in the next paragraph.
+
+Output a single line with the sum of $a_i,\enskip 1\le i\le\mathbf{N}$.
+
+\Examples
+% Examples here
+\begin{tabular}{|p{4cm}|p{3cm}|p{7.2cm}|}
+    \hline
+    {\bf \TitleInput} & {\bf \TitleOutput} & {\bf Paaiškinimas} \\
+    \hline
+    {\tt\obeylines
+7
+5 5
+3 6
+2 4
+4 8
+3 6
+3 5
+6 8} & {\tt\obeylines
+4
+1
+2
+4
+5} & {
+Daugiausia galima pakviesti keturis draugus,
+pavyzdžiui 1-ą, 2-ą, 4-ą ir 5-ą. Iš
+viso vakarėlyje dalyvaus penki asmenys (su
+Justu).
+
+1-asis draugas ateis, nes jis nori, kad
+vakarėlyje dalyvautų lygiai 5 asmenys. 
+
+2-asis draugas ateis, nes jis nori, kad
+vakarėlyje dalyvautų nuo 3 iki 6 asmenų. 
+
+4-asis ateis, nes jis nori, kad dalyvautų nuo
+4 iki 8 asmenų;
+
+5-asis ateis, nes jis nori, kad vakarėlyje
+dalyvautų nuo 3 iki 6 asmenų.
+
+Galimi ir kiti sprendiniai.} \\
+    \hline
+\end{tabular}
+
+\Grading
+Už testus, kuriuose $\mathbf{N} \le 10\ 000$, galima surinkti iki 50\% balų.
+
+\Constraints
+$1 \le \mathbf{N} \le \maxN$,\enskip
+$2\le m_i\le d_i\le \mathbf{N}+1$.
+
+\end{document}
+
