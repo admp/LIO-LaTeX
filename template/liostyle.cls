@@ -17,17 +17,18 @@
 \RequirePackage{times}
 \RequirePackage{listings}
 \RequirePackage{amsmath}
+\RequirePackage[sf,sl,topmarks]{titlesec}
 \RequirePackage[lithuanian]{babel}
 
 \pagestyle{fancy}
 
 % Things below are specific to littex, i.e. font encoding
-% and using Helvetica, Times and Courier instead of cmr family.
+% and using Courier as fixed-width font instead of cmr family.
 % Might want to try XeTeX one day.
 \def\LTfontencoding{L7x}
 \usepackage[\LTfontencoding]{fontenc}
-\renewcommand{\sfdefault}{uhv}
-\renewcommand{\rmdefault}{utm}
+%\renewcommand{\sfdefault}{uhv}
+%\renewcommand{\rmdefault}{utm}
 \renewcommand{\ttdefault}{ucr}
 
 %%
@@ -46,11 +47,12 @@
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
 
 \newcommand{\PageOf}[2]{psl. #1 iš #2}
-\newcommand{\Output}{Rezultatai}
-\newcommand{\Input}{Pradiniai duomenys}
-\newcommand{\Example}{Pavyzdys}
-\newcommand{\Constraints}{Ribojimai}
-\newcommand{\Grading}{Vertinimas}
+\newcommand{\TitleTask}{Užduotis}
+\newcommand{\TitleOutput}{Rezultatai}
+\newcommand{\TitleInput}{Pradiniai duomenys}
+\newcommand{\TitleExamples}{Pavyzdžiai}
+\newcommand{\TitleConstraints}{Ribojimai}
+\newcommand{\TitleGrading}{Vertinimas}
 
 %%
 %% Page layout
@@ -60,7 +62,7 @@
 %\showboxdepth=2
 %\showboxbreadth=50
 
-\newlength{\LogoLength}\setlength{\LogoLength}{1.5cm}
+\newlength{\LogoLength}\setlength{\LogoLength}{1.4cm}
 \newcommand{\Logo}{logo_titleless}
 
 \lhead{}\rhead{}
@@ -84,8 +86,31 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\taskheadline}[1]{{\sffamily\bfseries\LARGE\noindent#1\par}}
+%%
+%% Headings
+%%
 
+\newcommand\periodafter[1]{#1.}
+\newcommand\newsec[2]%
+  {\titleformat{#1}[#2]%
+    {\normalfont\bfseries}{\thesection.}{1em}{\periodafter}%
+   \titlespacing*{#1}{0pt}{10pt}{1.5ex plus .2ex}}
+
+\newsec{\section}{runin}
+\newsec{\subsection}{block} % quick ugly hack
+
+\newcommand\Task{\section*{\TitleTask}}
+\newcommand\Input{\section*{\TitleInput}}
+\newcommand\Output{\section*{\TitleOutput}}
+\newcommand\Examples{\subsection*{\TitleExamples}}
+\newcommand\Grading{\section*{\TitleGrading}}
+\newcommand\Constraints{\section*{\TitleConstraints}}
+
+%%
+%% Body
+%%
+
+\newcommand{\taskheadline}[1]{{\sffamily\bfseries\LARGE\noindent#1\par}}
 \AtBeginDocument{
     \headheight=72pt%
     \headsep=14pt%
