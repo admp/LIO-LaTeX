@@ -45,33 +45,38 @@
 \newcommand{\Olympiad}{Lietuvos moksleivių informatikos olimpiada}
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
 
-\newcommand{\PageOf}[2]{#1 puslapis iš #2}
+\newcommand{\PageOf}[2]{psl. #1 iš #2}
 \newcommand{\Output}{Rezultatai}
 \newcommand{\Input}{Pradiniai duomenys}
 \newcommand{\Example}{Pavyzdys}
 \newcommand{\Constraints}{Ribojimai}
 \newcommand{\Grading}{Vertinimas}
 
-%\overfullrule=3pt
-%\showboxdepth=2 \showboxbreadth=50
+%%
+%% Page layout
+%%
 
-\newlength{\LogoLength}\setlength{\LogoLength}{0cm}
+%\overfullrule=3pt
+%\showboxdepth=2
+%\showboxbreadth=50
+
+\newlength{\LogoLength}\setlength{\LogoLength}{1.5cm}
+\newcommand{\Logo}{logo_titleless}
 
 \lhead{}\rhead{}
 \chead{%
-    \begin{tabular}{@{}p{\LogoLength+2mm}@{}p{\textwidth-\LogoLength-2mm}@{}}%
+    \begin{tabular}{@{}p{\LogoLength+5mm}@{}p{\textwidth-\LogoLength-5mm}@{}}%
     \begin{minipage}[b]{\LogoLength}%
-    %\includegraphics[width=\LogoLength]{logo}%
-    %We will maybe have a logo here.
+    \includegraphics[width=\LogoLength]{\Logo}
     \end{minipage} &%
-    \begin{minipage}[b]{\textwidth-\LogoLength-2mm}%
-    \begin{centering}%
-    {\sffamily\scshape\Large\Olympiad}\\%[2mm]%
-    {\sffamily\LocationDate}\vskip 1mm \hrule\vskip 2mm%
-    {\sffamily\makebox[0pt][l]{\PageOf{\thepage}{\pageref{LastPage}}}%
-    % \hfill \countrycode
-    \hfill \makebox[0pt][r]{\textbf{\taskname}}}%
-    \end{centering}%
+    \begin{minipage}[b]{\textwidth-\LogoLength-5mm}%
+    {\sffamily\Large\Olympiad}
+    \vskip 2mm \hrule\vskip 2mm%
+    {\sffamily\makebox[0pt][l]{\LocationDate}%
+    \hfill\ttfamily\bfseries\makebox[0pt][r]{\taskname}}
+    \vskip 1mm%
+    {\sffamily\small\hfill
+     \makebox[0pt][r]{\PageOf{\thepage}{\pageref{LastPage}}}}%
     \end{minipage}%
     \end{tabular}%
 }
@@ -79,7 +84,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\taskheadline}[1]{{\sffamily\bfseries\LARGE\centering#1\par}}
+\newcommand{\taskheadline}[1]{{\sffamily\bfseries\LARGE\noindent#1\par}}
 
 \AtBeginDocument{
     \headheight=72pt%
