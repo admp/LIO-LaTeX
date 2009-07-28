@@ -19,6 +19,7 @@
 \RequirePackage{amsmath}
 \RequirePackage[sf,sl,topmarks]{titlesec}
 \RequirePackage[lithuanian]{babel}
+\RequirePackage{lmodern}
 
 \pagestyle{fancy}
 
@@ -27,9 +28,9 @@
 % Might want to try XeTeX one day.
 \def\LTfontencoding{L7x}
 \usepackage[\LTfontencoding]{fontenc}
-%\renewcommand{\sfdefault}{uhv}
+\renewcommand{\sfdefault}{uhv}
 %\renewcommand{\rmdefault}{utm}
-\renewcommand{\ttdefault}{ucr}
+%\renewcommand{\ttdefault}{ucr}
 
 %%
 %% Variables
@@ -78,7 +79,7 @@
     {\sffamily\makebox[0pt][l]{\LocationDate}%
     \hfill\ttfamily\bfseries\makebox[0pt][r]{\taskname}}
     \vskip 1mm%
-    {\sffamily\small\hfill
+    {\small\hfill
      \makebox[0pt][r]{\PageOf{\thepage}{\pageref{LastPage}}}}%
     \end{minipage}%
     \end{tabular}%
@@ -111,7 +112,7 @@
 %% Body
 %%
 
-\newcommand{\taskheadline}[1]{{\sffamily\bfseries\LARGE\noindent#1\par}}
+\newcommand{\taskheadline}[1]{{\bfseries\LARGE\noindent#1\par}}
 \AtBeginDocument{
     \headheight=72pt%
     \headsep=14pt%
