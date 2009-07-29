@@ -9,6 +9,7 @@
 \RequirePackage{times}
 \RequirePackage{a4wide}
 \RequirePackage{graphicx}
+\RequirePackage{wrapfig}
 \RequirePackage{pstricks}
 \RequirePackage{calc}
 \RequirePackage{ifthen}
