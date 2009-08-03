@@ -9,6 +9,7 @@ Ganėtinai trumpas (tačiau detalus) įvadas į LaTeX:
 TeX lituanizavimo instrukcijos:
 
     http://www.vtex.lt/tex/
+    (Ubuntu/Debian Linux instaliuokite paketą littex)
 
 Jeigu norite tiesiog pažiūrėti, kaip atrodo su LaTeX surinkta sąlyga
 kode bei ekrane -- rasite pavyzdį `sandbox' kataloge (2009 m. finalo
