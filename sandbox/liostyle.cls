@@ -5,6 +5,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{liostyle}
 \LoadClass[11pt,a4paper]{article}
+\RequirePackage{ifthen}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage{times}
 \RequirePackage{a4wide}
@@ -47,6 +48,7 @@
 
 \newcommand{\Olympiad}{Lietuvos moksleivių informatikos olimpiada}
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
+\newcommand{\Stage}{}
 
 \newcommand{\PageOf}[2]{psl. #1 iš #2}
 \newcommand{\TitleTask}{Užduotis}
@@ -65,7 +67,7 @@
 %\showboxdepth=2
 %\showboxbreadth=50
 
-\newlength{\LogoLength}\setlength{\LogoLength}{1.4cm}
+\newlength{\LogoLength}\setlength{\LogoLength}{1.1cm}
 \newcommand{\Logo}{logo_black}
 
 \lhead{}\rhead{}
@@ -77,15 +79,16 @@
     \begin{minipage}[b]{\textwidth-\LogoLength-5mm}%
     {\sffamily\Large\Olympiad}
     \vskip 2mm \hrule\vskip 2mm%
-    {\sffamily\makebox[0pt][l]{\LocationDate}%
+    {\sffamily\makebox[0pt][l]{%
+		\ifthenelse{\equal\Stage{}}{}{\Stage\enskip$\bullet$\enskip}%
+		\LocationDate}%
     \hfill\ttfamily\bfseries\makebox[0pt][r]{\taskname}}
-    \vskip 1mm%
-    {\small\hfill
-     \makebox[0pt][r]{\PageOf{\thepage}{\pageref{LastPage}}}}%
     \end{minipage}%
     \end{tabular}%
 }
-\lfoot{}\cfoot{}\rfoot{}
+\lfoot{}\rfoot{}
+\cfoot{\small
+	\makebox[0pt][r]{\PageOf{\thepage}{\pageref{LastPage}}}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -115,7 +118,7 @@
 
 \newcommand{\taskheadline}[1]{{\bfseries\LARGE\noindent#1\par}}
 \AtBeginDocument{
-    \headheight=72pt%
+    \headheight=50pt%
     \headsep=14pt%
     \taskheadline{\longtaskname}%
     \parindent=0pt%
