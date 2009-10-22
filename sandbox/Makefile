@@ -12,7 +12,7 @@ RERUN='(There were undefined references|Rerun to get (cross-references|the bars)
 
 all: $(PDFS)
 
-%.pdf: %.tex
+%.pdf: %.tex liostyle.cls
 	@echo "====> LaTeX first pass"
 	@$(LATEX) $<
 	@if egrep -q $(RERUN) $*.log ; then echo "====> LaTeX rerun" && $(LATEX) $<; fi
