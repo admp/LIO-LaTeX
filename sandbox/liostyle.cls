@@ -40,6 +40,7 @@
 
 \newcommand{\taskname}{}     % renew in taskdescription
 \newcommand{\longtaskname}{} % renew in taskdescription
+\newcommand{\taskgroup}{}    % renew in taskdescription
 \newcommand{\version}{1.0}   % not used at the moment
 
 %%
@@ -81,7 +82,9 @@
     \vskip 2mm \hrule\vskip 2mm%
     {\sffamily\makebox[0pt][l]{%
 		\ifthenelse{\equal\Stage{}}{}{\Stage\enskip$\bullet$\enskip}%
-		\LocationDate}%
+		\LocationDate%
+		\ifthenelse{\equal\taskgroup{}}{}{\enskip$\bullet$%
+		            \enskip\taskgroup\ grupė}}%
     \hfill\ttfamily\bfseries\makebox[0pt][r]{\taskname}}
     \end{minipage}%
     \end{tabular}%
