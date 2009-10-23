@@ -49,7 +49,7 @@
 
 \newcommand{\Olympiad}{Lietuvos mokinių informatikos olimpiada}
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
-\newcommand{\Stage}{}
+\newcommand{\Stage}{Finalas}
 
 \newcommand{\PageOf}[2]{psl. #1 iš #2}
 \newcommand{\TitleTask}{Užduotis}
