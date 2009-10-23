@@ -46,7 +46,7 @@
 %% Strings
 %%
 
-\newcommand{\Olympiad}{Lietuvos moksleivių informatikos olimpiada}
+\newcommand{\Olympiad}{Lietuvos mokinių informatikos olimpiada}
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
 \newcommand{\Stage}{}
 
