@@ -17,6 +17,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
 \RequirePackage{times}
+\RequirePackage{verbatim}
 \RequirePackage{listings}
 \RequirePackage{amsmath}
 \RequirePackage[sf,sl,topmarks]{titlesec}
@@ -129,16 +130,16 @@
 }
 
 % this is very lame, I guess, but a quick hack that worked...
-\newcommand\example{% need a flexible way to change column widths
+\newcommand\example[3]{% need a flexible way to change column widths
     \begin{tabular}{|p{4cm}|p{3cm}|p{7.2cm}|}
         \hline
         {\bf\TitleInput} & {\bf\TitleOutput} & {\bf\TitleExplanation} \\
         \hline
-        \begingroup\tt\obeylines\examplefirst}
-\long\def\examplefirst#1{#1\endgroup & \begingroup\tt\obeylines\examplesecond}
-\long\def\examplesecond#1{#1\endgroup & \begingroup\examplethird}
-\long\def\examplethird#1{#1\endgroup\\%
-    \hline\end{tabular}}
+        {\tt#1} & {\tt#2} & {#3} \\
+        \hline
+    \end{tabular}}
+\newcommand\includefile[1]{
+    \vspace{-1.5em}\verbatiminput{#1}}
 
 % vi: ts=4 sw=4 enc=utf-8
 
