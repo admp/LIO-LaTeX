@@ -53,7 +53,7 @@
 \newcommand{\LocationDate}{Vilnius, 2009 m. kovo 14-18}
 \newcommand{\Stage}{Finalas}
 
-\newcommand{\PageOf}[2]{psl. #1 iš #2}
+\newcommand{\PageOf}[2]{#1 psl. iš #2}
 \newcommand{\TitleTask}{Užduotis}
 \newcommand{\TitleOutput}{Rezultatai}
 \newcommand{\TitleInput}{Pradiniai duomenys}
