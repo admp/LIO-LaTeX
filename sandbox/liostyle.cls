@@ -129,13 +129,20 @@
     \parskip=6pt
 }
 
-% this is very lame, I guess, but a quick hack that worked...
 \newcommand\example[3]{% need a flexible way to change column widths
     \begin{tabular}{|p{4cm}|p{3cm}|p{7.2cm}|}
         \hline
         {\bf\TitleInput} & {\bf\TitleOutput} & {\bf\TitleExplanation} \\
         \hline
         {\tt#1} & {\tt#2} & {#3} \\
+        \hline
+    \end{tabular}}
+\newcommand\rawexample[3]{%
+    \begin{tabular}{|p{5cm}|p{4cm}|}
+        \hline
+        {\bf\TitleInput} & {\bf\TitleOutput} \\
+        \hline
+        {\tt#1} & {\tt#2} \\
         \hline
     \end{tabular}}
 \newcommand\includefile[1]{
